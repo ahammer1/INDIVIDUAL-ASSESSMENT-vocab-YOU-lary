@@ -1,0 +1,14 @@
+{
+  "1" :{
+    "id": "",
+    "name": "id",
+    "definition": "Gives the element an identification of targeting",
+    "tech": "html"
+  },
+  "2" :{
+    "id": "",
+    "name": "class",
+    "definition": "Applies a CSS class style to an element",
+    "tech": "html"
+  }
+}
