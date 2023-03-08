@@ -6,7 +6,10 @@ const formEvents = () => {
     e.preventDefault();
     if (e.target.id.includes('submit-vocab')) {
       const payload = {
-
+        name: document.querySelector('#name').value,
+        definition: document.querySelector('#definition').value,
+        ltech: document.querySelector('#ltech').value,
+        time: new Date().tolocaleString()
       };
 
       createVocab(payload).then(({ name }) => {
@@ -21,6 +24,9 @@ const formEvents = () => {
     if (e.target.id.includes('update-voacb')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
+        name: document.querySelector('#name').value,
+        definition: document.querySelector('#definition').value,
+        ltech: document.querySelector('#ltech').value,
         firebaseKey,
       };
 

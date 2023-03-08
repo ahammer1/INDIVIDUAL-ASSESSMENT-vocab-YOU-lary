@@ -1,4 +1,4 @@
-import { createVocab } from '../api/vocabData';
+import { createVocab, getVocab } from '../api/vocabData';
 import { showVocab } from '../pages/vocab ';
 import { signOut } from '../utils/auth';
 
@@ -8,10 +8,12 @@ const navigationEvents = () => {
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
+  document.querySelector('#vocab').addEventListener('click', () => {
+    getVocab().then(showVocab);
+  });
   document.querySelector('#create-entery').addEventListener('click', () => {
     createVocab().then(showVocab);
   });
-
   // STRETCH: SEARCH
   document.querySelector('#search').addEventListener('keyup', (e) => {
     const searchValue = document.querySelector('#search').value.toLowerCase();

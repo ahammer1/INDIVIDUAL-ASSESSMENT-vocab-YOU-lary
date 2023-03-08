@@ -1,11 +1,11 @@
 import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
-import navigationEvents from '..';
+import navigationEvents from '../events/navigationEvents';
 import domBuilder from '../components/dombuilder';
 import navBar from '../components/navBar';
 import logoutButton from '../components/logoutButton';
-import { getVocab } from '../api/vocabData';
-import { showVocab } from '../pages/vocab ';
+// import { getVocab } from '../api/vocabData';
+// import { showVocab } from '../pages/vocab ';
 
 //  import getBooks from '../api/bookData';
 
@@ -16,8 +16,7 @@ const startApp = () => {
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
-
-  getVocab().then(showVocab);
+  // getVocab().then(showVocab);
 };
 
 export default startApp;
