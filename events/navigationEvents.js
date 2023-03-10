@@ -1,5 +1,5 @@
 import { createVocab, getVocab } from '../api/vocabData';
-import { showVocab } from '../pages/vocab ';
+import { showVocab } from '../pages/vocab';
 import { signOut } from '../utils/auth';
 
 // navigation events

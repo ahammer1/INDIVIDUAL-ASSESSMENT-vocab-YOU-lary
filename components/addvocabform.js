@@ -17,7 +17,7 @@ const addVocabForm = () => {
         <label for="title">ltech</label>
         <input type="ltech" class="form-control" id="ltech" aria-describedby="ltech" placeholder="Enter ltech" required>
       </div>
-      <button type="submit" class="btn btn-primary mt-3">Submit Vocab</button>
+      <button type="submit-vocab" class="btn btn-primary mt-3">Submit Vocab</button>
     </form>`;
 
   renderToDOM('#form-container', domString);

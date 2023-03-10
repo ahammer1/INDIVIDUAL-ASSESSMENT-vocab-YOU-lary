@@ -1,6 +1,6 @@
 import { deleteVocab, getSingleVocab, getVocab } from '../api/vocabData';
 import addVocabForm from '../components/addvocabform';
-import { showVocab } from '../pages/vocab ';
+import { showVocab } from '../pages/vocab';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -25,7 +25,7 @@ const domEvents = () => {
     if (e.target.id.includes('edit-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getSingleVocab(firebaseKey).then(() => addVocabForm());
+      getSingleVocab(firebaseKey).then((vocabObj) => addVocabForm(vocabObj));
       // getSingleBook(firebaseKey).then(addBookForm);
     }
 

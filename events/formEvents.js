@@ -1,5 +1,5 @@
 import { createVocab, getVocab, updateVocab } from '../api/vocabData';
-import { showVocab } from '../pages/vocab ';
+import { showVocab } from '../pages/vocab';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -9,7 +9,6 @@ const formEvents = () => {
         name: document.querySelector('#name').value,
         definition: document.querySelector('#definition').value,
         ltech: document.querySelector('#ltech').value,
-        time: new Date().tolocaleString()
       };
 
       createVocab(payload).then(({ name }) => {
